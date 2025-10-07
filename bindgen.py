@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -* coding: utf-8 -*
 import os
 import sys
 from generate import FFI
@@ -31,7 +29,7 @@ def generate_fortran(config):
 def generate_python(config):
     ffi = FFI(config["header"])
     root = config["outpath"]
-    python.write_ffi(os.path.join(root, "ffi.py"), ffi.enums, ffi.functions)
+    python.write_ffi(os.path.join(root, "_c_api.py"), ffi.enums, ffi.functions)
 
 
 def generate_julia(config):

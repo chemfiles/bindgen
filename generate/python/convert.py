@@ -1,9 +1,8 @@
-# -* coding: utf-8 -*
 """
 This module create the python version of C arguments, types, ...
 """
+
 from generate.ctype import ArrayType, StringType, PtrToArrayType
-from generate import CHFL_TYPES
 
 CONVERSIONS = {
     "double": "c_double",

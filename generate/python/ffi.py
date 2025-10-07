@@ -1,17 +1,14 @@
-# -* coding: utf-8 -*
-
 """
 This module generate the Python interface declaration for the functions it
 finds in a C header. It only handle edge cases for the chemfiles.h header.
 """
+
 from .constants import BEGINING
 from .convert import type_to_python
 
-from generate.ctype import StringType
 from generate import CHFL_TYPES
 
-BEGINING += """
-# flake8: noqa
+BEGINING += """# fmt: off
 '''
 Foreign function interface declaration for the Python interface to chemfiles
 '''
